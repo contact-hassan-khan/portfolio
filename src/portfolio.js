@@ -20,8 +20,8 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Hassan Khan",
-  title: "Hi all, I'm Hassan",
+  username:  process.env.REACT_APP_USERNAME || "Hassan Khan",
+  title: `Hi, I'm  Hassan khan`,
   subTitle: emoji(
     "`I'm a student and aspiring DevOps engineer with a growing passion for automation, cloud technologies, and infrastructure as code.I've been learning and building hands-on with tools like Docker, GitHub, AWS, Linux, Python, and Bash scripting.I'm a fast learner, enjoy solving real-world problems, and love working in collaborative environments. Currently, I'm focused on creating smart, reliable systems and developing projects that reflect real DevOps workflows."
   ),
