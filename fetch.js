@@ -7,101 +7,129 @@ const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA === "true";
 const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
 
-if (USE_GITHUB_DATA && (!GITHUB_USERNAME || !GITHUB_TOKEN)) {
-  console.error("❌ ERROR: Please set GITHUB_USERNAME and REACT_APP_GITHUB_TOKEN in .env file");
-  process.exit(1);
-}
-
+// GitHub data fetching
 if (USE_GITHUB_DATA) {
+  if (!GITHUB_USERNAME || !GITHUB_TOKEN) {
+    console.error("❌ ERROR: Missing GitHub credentials in .env file");
+    process.exit(1);
+  }
+
   console.log(`📦 Fetching GitHub profile for '${GITHUB_USERNAME}'...`);
 
   const githubQuery = JSON.stringify({
     query: `
-    {
-      user(login:"${GITHUB_USERNAME}") {
-        name
-        bio
-        avatarUrl
-        location
-        pinnedItems(first: 6, types: [REPOSITORY]) {
-          edges {
-            node {
-              ... on Repository {
-                name
-                description
-                forkCount
-                stargazers { totalCount }
-                url
-                id
-                diskUsage
-                primaryLanguage { name color }
+      {
+        user(login: "${GITHUB_USERNAME}") {
+          name
+          bio
+          avatarUrl
+          location
+          pinnedItems(first: 6, types: [REPOSITORY]) {
+            edges {
+              node {
+                ... on Repository {
+                  name
+                  description
+                  forkCount
+                  stargazers { totalCount }
+                  url
+                  id
+                  diskUsage
+                  primaryLanguage { name color }
+                }
               }
             }
           }
         }
       }
-    }
     `
   });
 
-  const options = {
+  const githubOptions = {
     hostname: "api.github.com",
     path: "/graphql",
     method: "POST",
     headers: {
       Authorization: `Bearer ${GITHUB_TOKEN}`,
-      "User-Agent": "Node",
-      "Content-Type": "application/json"
+      "User-Agent": "Portfolio-Builder",
+      "Content-Type": "application/json",
+      "Content-Length": githubQuery.length
     }
   };
 
-  const req = https.request(options, res => {
+  const githubReq = https.request(githubOptions, (res) => {
     let body = "";
 
-    res.on("data", chunk => (body += chunk));
+    res.on("data", (chunk) => (body += chunk));
     res.on("end", () => {
-      if (res.statusCode === 200) {
+      try {
+        const parsedBody = JSON.parse(body);
+        if (parsedBody.errors) {
+          console.error("❌ GitHub API Error:", parsedBody.errors);
+          process.exit(1);
+        }
         fs.writeFileSync("./public/profile.json", body);
-        console.log("✅ GitHub profile saved to public/profile.json");
-      } else {
-        console.error("❌ GitHub API request failed:", res.statusCode, body);
+        console.log("✅ GitHub profile saved successfully");
+      } catch (err) {
+        console.error("❌ Response parsing error:", err);
+        process.exit(1);
       }
     });
   });
 
-  req.on("error", err => console.error("❌ Request error:", err));
-  req.write(githubQuery);
-  req.end();
+  githubReq.on("error", (err) => {
+    console.error("❌ GitHub Request Failed:", err);
+    process.exit(1);
+  });
+
+  githubReq.write(githubQuery);
+  githubReq.end();
 }
 
-// Medium blog fetch (optional)
+// Medium blog fetching
 if (MEDIUM_USERNAME) {
   console.log(`📰 Fetching Medium blogs for @${MEDIUM_USERNAME}...`);
 
-  const encodedMediumUsername = encodeURIComponent(MEDIUM_USERNAME); // URL encode the username
-
+  const rssUrl = `https://medium.com/feed/@${MEDIUM_USERNAME}`;
+  const encodedRssUrl = encodeURIComponent(rssUrl);
+  
   const mediumOptions = {
     hostname: "api.rss2json.com",
-    path: `/v1/api.json?rss_url=https://medium.com/feed/@${encodedMediumUsername}`, // Using the encoded username in the URL
-    method: "GET"
+    path: `/v1/api.json?rss_url=${encodedRssUrl}`,
+    method: "GET",
+    headers: {
+      "User-Agent": "Portfolio-Builder"
+    }
   };
 
-  const req = https.request(mediumOptions, res => {
-    let blogData = "";
+  const mediumReq = https.request(mediumOptions, (res) => {
+    let data = "";
 
-    res.on("data", chunk => (blogData += chunk));
+    res.on("data", (chunk) => (data += chunk));
     res.on("end", () => {
-      if (res.statusCode === 200) {
-        fs.writeFileSync("./public/blogs.json", blogData);
-        console.log("✅ Medium blogs saved to public/blogs.json");
-      } else {
-        console.error("❌ Medium API failed:", res.statusCode);
+      try {
+        const parsedData = JSON.parse(data);
+        if (parsedData.status === "error") {
+          console.error(`❌ Medium Error: ${parsedData.message}`);
+          return;
+        }
+        if (parsedData.items.length === 0) {
+          console.log("ℹ️ No Medium posts found");
+          return;
+        }
+        fs.writeFileSync("./public/blogs.json", data);
+        console.log("✅ Medium blogs saved successfully");
+      } catch (err) {
+        console.error("❌ Medium Response Error:", err);
       }
     });
   });
 
-  req.on("error", err => console.error("❌ Medium fetch error:", err));
-  req.end();
+  mediumReq.on("error", (err) => {
+    console.error("❌ Medium Request Failed:", err);
+  });
+
+  mediumReq.end();
 } else {
-  console.log("ℹ️ Skipping Medium fetch (no MEDIUM_USERNAME set).");
+  console.log("ℹ️ Skipping Medium integration");
 }

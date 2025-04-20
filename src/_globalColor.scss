@@ -1,6 +1,7 @@
 /* Change colors in this file to style to your needs on a global level. 
 Certain colors are used for different and multiply types of elements. 
 For greater control over colors visit each components .scss file. */
+@forward 'sass:math';
 
 // button colors
 $buttonColor: #55198b;

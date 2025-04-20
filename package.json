@@ -17,10 +17,9 @@
     "react-easy-emoji": "^1.8.1",
     "react-headroom": "^3.0.0",
     "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "react-test-renderer": "^16.10.2",
-    "react-twitter-embed": "3.0.3",
-    "sass": "^1.32.8"
+    "react-twitter-embed": "3.0.3"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -55,6 +54,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "dotenv": "^8.6.0",
-    "prettier": "^2.3.1"
+    "prettier": "^2.8.8",
+    "sass": "^1.86.3"
   }
 }
