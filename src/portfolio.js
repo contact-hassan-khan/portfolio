@@ -26,7 +26,7 @@ const greeting = {
     "`I'm a student and aspiring DevOps engineer with a growing passion for automation, cloud technologies, and infrastructure as code.I've been learning and building hands-on with tools like Docker, GitHub, AWS, Linux, Python, and Bash scripting.I'm a fast learner, enjoy solving real-world problems, and love working in collaborative environments. Currently, I'm focused on creating smart, reliable systems and developing projects that reflect real DevOps workflows."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1K9KQB2Ca0d_UYMhoZA0uHEz6MfWbBv31/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -38,7 +38,7 @@ const socialMediaLinks = {
   gmail: "hassan14kha@gmail.com",
   gitlab: "",
   facebook: "",
-  medium: "",
+  medium: "https://medium.com/@hassan14kha",
   stackoverflow: "",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
@@ -125,9 +125,7 @@ const educationInfo = {
       subHeader: "HSC",
       duration: "March 2019 - February 2021",
       desc: "Participated in NSS and worked as a volunteer in various events.",
-      descBullets: [
-
-      ]
+      descBullets: []
     }
   ]
 };
@@ -162,7 +160,7 @@ const workExperiences = {
       role: "Data Science Intern",
       company: "Mitu skillologies",
       companylogo: require("./assets/images/logo2.jpg"),
-      date: "June 2018 – Present",
+      date: "April 2024 – May 2024",
       desc: "Analyzed financial data and generated reports that provided key insights into the financial health of thecompany. Cleaned and manipulated raw data. Performed exploratory data analysis on large datasets toidentify patterns and trends.",
       descBullets: [
         " Analyzed 891-passenger dataset with pandas and matplotlib. Built logistic regression model achieving 85% accuracy in predicting survival outcomes.",
@@ -272,7 +270,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set true to show this section, defaults to false
 };
 
 // Blogs Section
@@ -284,16 +282,16 @@ const blogSection = {
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
+      url: "",
+      title: "",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        ""
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
+      url: "https://medium.com/@hassan14kha/what-is-devops-bridging-the-gap-between-development-and-operations-1b299472113c",
+      title: "What is DevOps? Bridging the Gap Between Development and Operations",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+        "DevOps is a cultural and technical movement that unites development and operations "
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -304,31 +302,31 @@ const blogSection = {
 const talkSection = {
   title: "TALKS",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+    ""
   ),
 
   talks: [
     {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
+      title: "",
+      subtitle: "",
+      slides_url: "",
+      event_url: ""
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  subtitle: "",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+    ""
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
@@ -344,8 +342,8 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  number: "+91-9890467034",
+  email_address: "hassan14kha@gmail.com"
 };
 
 // Twitter Section

@@ -1,6 +1,6 @@
 {
-  "homepage": "https://developerfolio.js.org/",
-  "name": "developerfolio",
+  "homepage": "https://github.com/contact-hassan-khan/portfolio.git",
+  "name": "hassanfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "gh-pages": "^5.0.0",
+    "hassanfolio": "file:",
     "jest-canvas-mock": "^2.3.1",
     "lottie-react": "^2.4.0",
     "react": "^16.10.2",
