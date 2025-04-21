@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/contact-hassan-khan/portfolio.git",
-  "name": "hassanfolio",
+  "homepage": "/",
+  "name": "hassanportfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "gh-pages": "^5.0.0",
     "hassanfolio": "file:",
+    "hassanportfolio": "file:",
     "jest-canvas-mock": "^2.3.1",
     "lottie-react": "^2.4.0",
     "react": "^16.10.2",
@@ -17,14 +18,14 @@
     "react-easy-emoji": "^1.8.1",
     "react-headroom": "^3.0.0",
     "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "react-test-renderer": "^16.10.2",
     "react-twitter-embed": "3.0.3",
     "sass-loader": "^16.0.5"
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start && node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
     "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test",
