@@ -23,7 +23,7 @@ const greeting = {
   username:  process.env.REACT_APP_USERNAME || "Hassan Khan",
   title: `Hi, I'm  Hassan khan`,
   subTitle: emoji(
-    "`I'm a student and aspiring DevOps engineer with a growing passion for automation, cloud technologies, and infrastructure as code.I've been learning and building hands-on with tools like Docker, GitHub, AWS, Linux, Python, and Bash scripting.I'm a fast learner, enjoy solving real-world problems, and love working in collaborative environments. Currently, I'm focused on creating smart, reliable systems and developing projects that reflect real DevOps workflows."
+    "I'm a student and aspiring DevOps Engineer with a passion for automation, cloud technologies, and infrastructure as code. I enjoy learning and working with tools like Docker , GitHub , AWS , Linux , Python , and Bash scripting to solve real-world problems."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1K9KQB2Ca0d_UYMhoZA0uHEz6MfWbBv31/view?usp=sharing", // Set to empty to hide the button
@@ -350,10 +350,10 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
