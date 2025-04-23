@@ -1,9 +1,3 @@
-Here’s a **detailed and attractive `README.md`** you can directly copy-paste into your GitHub repository. It highlights your skills, project purpose, technologies used, and includes badges and visuals to make it stand out.
-
----
-
-### 📄 `README.md`
-
 ```markdown
 <h1 align="center">🌐 Hassan's DevOps Portfolio</h1>
 
