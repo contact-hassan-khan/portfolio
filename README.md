@@ -17,7 +17,7 @@
 
 ## 📸 Preview
 
-> 🌐 **Live URL**: [your-render-link](https://your-live-link.com)
+> 🌐 **Live URL**: [your-render-link](https://portfolio-atww.onrender.com)
 
 ![Portfolio Preview](./public/preview.png)
 
