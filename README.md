@@ -124,9 +124,7 @@ npm run build
 
 ---
 
-## 📜 License
 
-Licensed under the [MIT License](LICENSE).
 
 ---
 
