@@ -23,7 +23,7 @@ const greeting = {
   username:  process.env.REACT_APP_USERNAME || "Hassan Khan",
   title: `Hi, I'm  Hassan khan`,
   subTitle: emoji(
-    "I'm a student and aspiring DevOps Engineer with a passion for automation, cloud technologies, and infrastructure as code. I enjoy learning and working with tools like Docker , GitHub , AWS , Linux , Python , and Bash scripting to solve real-world problems."
+    "I'm a Computer Engineering graduate and a passionate Cybersecurity Enthusiast. I enjoy exploring ethical hacking, penetration testing, digital forensics, and cyber defense. Skilled with tools like Wireshark, Burp Suite, Nmap, Metasploit, Linux, GitHub, and scripting with Python and Bash."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1K9KQB2Ca0d_UYMhoZA0uHEz6MfWbBv31/view?usp=sharing", // Set to empty to hide the button
@@ -49,12 +49,12 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "Aspiring DevOps engineer with a growing passion for automation, cloud technologies",
+  subTitle: "Cybersecurity Enthusiast exploring the world of ethical hacking, scripting, and Linux",
   skills: [
     emoji(
-      "⚡ Developed Python and Bash scripts to automate workflows, reducing manual effort by 30% in previous projects.  "
+      "⚡ Skilled in penetration testing and vulnerability analysis.  "
     ),
-    emoji("⚡ Gained practical experience with AWS and Docker."),
+    emoji("⚡  Hands-on with tools like Nmap, Wireshark, Burp Suite, and Metasploit."),
     emoji(
       "⚡ Proficient in Git, GitHub, and collaborative coding practices."
     )
@@ -69,35 +69,51 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-python"
     }, 
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "Cybersecurity",
+      fontAwesomeClassname: "fas fa-shield-alt"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
+      skillName: "Ethical Hacking",
+      fontAwesomeClassname: "fas fa-user-secret"
     },
     {
-      skillName: "Linux",
+      skillName: "Kali Linux",
       fontAwesomeClassname: "fab fa-linux"
       
     },
     
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "Wireshark",
+      fontAwesomeClassname: "fas fa-network-wired"
     },
     {
-      skillName: "git",
+      skillName: "Nmap",
+      fontAwesomeClassname: "fas fa-terminal"
+    },
+    {
+      skillName: "Metasploit",
+      fontAwesomeClassname: "fas fa-bug"
+    },
+    {
+      skillName: "Burp Suite",
+      fontAwesomeClassname: "fas fa-bug"
+      
+    },
+    {
+      skillName: "Git",
       fontAwesomeClassname: "fab fa-git-alt"
     },
     {
-      skillName: "github",
+      skillName: "GitHub",
       fontAwesomeClassname: "fab fa-github"
     },
     {
-      skillName: "bash scripting",
-      fontAwesomeClassname: "fas fa-terminal"
-      
+      skillName: "Aws",
+      fontAwesomeClassname: "fab fa-aws"
+    },
+    {
+      skillName: "Cryptography",
+      fontAwesomeClassname: "fas fa-lock"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -136,12 +152,12 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "DevOps", //Insert stack or technology you have experience in
-      progressPercentage: "60%" //Insert relative proficiency in percentage
+      Stack: "Cybersecurity",
+      progressPercentage: "75%"
     },
     {
-      Stack: "CI/CD",
-      progressPercentage: "70%"
+      Stack: "Linux",
+      progressPercentage: "80%"
     },
     {
       Stack: "Programming",
