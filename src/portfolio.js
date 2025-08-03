@@ -26,7 +26,7 @@ const greeting = {
     "I'm a Computer Engineering graduate and a passionate Cybersecurity Enthusiast. I enjoy exploring ethical hacking, penetration testing, digital forensics, and cyber defense. Skilled with tools like Wireshark, Burp Suite, Nmap, Metasploit, Linux, GitHub, and scripting with Python and Bash."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1K9KQB2Ca0d_UYMhoZA0uHEz6MfWbBv31/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1-fedQoy9wzvSaOtLQZMKMbDKtLQHmHGa/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
