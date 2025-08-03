@@ -1,7 +1,8 @@
-<h1 align="center">🚀 Hassan Khan's DevOps Portfolio</h1>
+<h1 align="center">🚀 Hassan Khan's Portfolio</h1>
 
 <p align="center">
-  A modern and dynamic developer portfolio built with React.js, showcasing my journey in DevOps, cloud, and automation technologies.
+    A modern and dynamic portfolio built with React.js, showcasing my journey as a <b>Cybersecurity Enthusiast</b> and <b>Computer Engineering Graduate</b> passionate about cloud, automation, and security.
+
 </p>
 
 <p align="center">
@@ -27,11 +28,11 @@
 
 This portfolio website is built to showcase:
 
-- 🌟 My skills as an aspiring DevOps engineer
-- 🔨 Tools like Docker, GitHub, AWS, Linux, Python, Bash
-- 📄 Medium blog posts and publications
-- 🏆 Certifications and achievements
-- 💼 Experience, education, and major DevOps projects
+- 🌐 My passion and skills in **Cybersecurity** and **CloudEngineering**
+- ⚙️ Practical use of tools like **Docker, GitHub, AWS, Linux, Python, Bash**
+- 📄 Integration of my **Medium blogs** and **technical write-ups**
+- 🏆 Display of **certifications, achievements, and project work**
+- 🎓 Background as a **Computer Engineering graduate**
 
 ---
 
@@ -144,5 +145,5 @@ npm run build
 
 ---
 
-> ⚡ Made with ❤️ by Hassan Khan — DevOps Enthusiast, Fast Learner, and Cloud Explorer.
+> ⚡ Made with ❤️ by Hassan Khan — Cybersecurity Enthusiast, Fast Learner, and Cloud Explorer.
 

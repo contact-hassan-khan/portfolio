@@ -173,13 +173,13 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Data Science Intern",
-      company: "Mitu skillologies",
-      companylogo: require("./assets/images/logo2.jpg"),
-      date: "April 2024 – May 2024",
-      desc: "Analyzed financial data and generated reports that provided key insights into the financial health of thecompany. Cleaned and manipulated raw data. Performed exploratory data analysis on large datasets toidentify patterns and trends.",
+      role: "SOC Analyst Intern",
+      company: "Chaitanya Cyber Strix Technologies Private Limited",
+      companylogo: require("./assets/images/Soc-intern.png"),
+      date: "Nov 2023 – Jan 2024",
+      desc: "Performed hands-on cybersecurity operations using enterprise security tools for threat detection and analysis",
       descBullets: [
-        " Analyzed 891-passenger dataset with pandas and matplotlib. Built logistic regression model achieving 85% accuracy in predicting survival outcomes.",
+        " Successfully met all internship objectives in security monitoring, incident response, and vulnerability assessment",
       ]
     },
     
@@ -198,29 +198,29 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "SOME TOOL THAT I HAVE CREATED",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/Phishguard.png"),
+      projectName: "PhishGuard",
+      projectDesc: "Detect phishing links from URLs or QR codes in seconds",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://phishguard-ynep.onrender.com/"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/Phishguard.png"),
+      projectName: "NetScan CLI",
+      projectDesc: "Lightning-fast local-network reconnaissance Discover hosts, open ports, banners and CVEs – in one command.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
+          url: "https://github.com/contact-hassan-khan/netscan-cli"
         }
       ]
     }
@@ -234,59 +234,69 @@ const bigProjects = {
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Achievements, Certifications, Award Letters and Some Stuff that I have done !",
 
-  achievementsCards: [
+    achievementsCards: [
+  {
+    title: "Published Researcher",
+    subtitle:
+      "Published abstracts of 2 peer-reviewed papers on virtual laboratory technologies and implementations at international conferences, contributing to educational technology research.",
+    image: require("./assets/images/researchpaperlogo.jpg"),
+    imageAlt: "",
+    footerLink: [
+      {
+        name: "Certification-1",
+        url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+      },
+      {
+        name: "Certification-2",
+        url: "https://drive.google.com/file/d/1K9KQB2Ca0d_UYMhoZA0uHEz6MfWbBv31/view?usp=sharing"
+      }
+    ]
+  },
     {
-      title: "Google Code-In Finalist",
+      title: "CEH v13 Certification (In Progress)",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Certified Ethical Hacker v13 candidate demonstrating advanced penetration testing and ethical hacking skills for cybersecurity professionals.",
+      image: require("./assets/images/CEHv13.png"),
+      imageAlt: "CEH Certification Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
-    },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
           url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
         }
       ]
     },
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "McKinsey.org Forward Program",
+      subtitle: "Completed prestigious strategic thinking and data-driven decision making program, developing business acumen and leadership skills.",
+      image: require("./assets/images/McKinseyforward.png"),
+      imageAlt: "McKinsey Forward Logo",
       footerLink: [
-        {name: "Certification", url: ""},
+        {name: "Program Details", url: "https://www.mckinsey.com/forward/learning-platform"},
         {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: "Certificate",
+          url: "https://www.credly.com/badges/21d26265-5b17-401d-9747-e9eef0635a00/public_url"
         }
+      ]
+    },
+    {
+      title: "Cisco Cybersecurity Foundations",
+      subtitle:
+        "Completed Cisco Cybersecurity Foundations training, gaining essential knowledge in cybersecurity principles and practices.",
+      image: require("./assets/images/cisco.png"),
+      imageAlt: "Cisco Logo",
+      footerLink: [
+        {
+          name: "Certificate",
+          url: "https://www.credly.com/badges/ab1ae454-51a9-43e9-b477-273cb1433ec0/public_url"
+        },
+       
       ]
     }
   ],
-  display: false // Set true to show this section, defaults to false
+  display: true // Set true to show this section, defaults to false
 };
 
 // Blogs Section
